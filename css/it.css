@@ -1,0 +1,240 @@
+body#Body {
+    padding-top: unset;
+    padding-bottom: unset;
+}
+
+
+.Root {
+   min-height: 100vh;
+   background: #f5f4f2;
+}
+
+
+.Main {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 970px;
+    margin: 0 auto;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+main.Main_body {
+       margin-right: 0.4rem;
+    position: relative;
+        padding: 25px;
+    border-radius: 4px;
+    /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAE0lEQVQIW2N48+bNfxhggLPwcgDQbi+YlZXTEQAAAABJRU5ErkJggg==);*/
+}
+
+
+
+.SubHeading {
+        text-rendering: optimizeLegibility;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+    color: #777;
+      font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+
+
+
+.Header {
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background: linear-gradient(transparent, transparent 21px, #fff 21px, #fff 57px, transparent 57px, transparent);
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+    .Header_body {
+        margin: 0 auto;
+        display: -ms-flexbox;
+        display: flex;
+        
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+        img.logo-large {
+            display: block;
+            background-size: contain;
+            border: 3px solid #fff;
+            border-radius: 100%;
+            width: 74px;
+            height: 74px;
+            margin: 3px 10px 0 0;
+        }
+        
+        a.Header_me {
+            color: #424242;
+            text-rendering: optimizeLegibility;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .Header nav {
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+        
+        .ribbon a:link, .ribbon a:visited { 
+            color:#000;
+            text-decoration:none;
+            float:left;
+            overflow:hidden;
+            background: #f5f4f2;
+            height: 44px;
+            margin-top: -8px;
+        }
+        
+        .ribbon span {
+            background-color: #fff;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 36px;
+            padding: 0 10px;
+            margin-top: 8px;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .ribbon span:before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 0;
+            border-right: 8px solid #7572c1;
+            border-bottom: 8px solid #fff;    
+        }
+        
+        .ribbon span:after {
+            content: '';
+            position: absolute;
+            top: 36px;
+            right: 0;
+            border-left: 8px solid #7572c1;
+            border-bottom: 8px solid #fff;
+        }
+        
+        .ribbon a:hover span {
+              background:#b6b3e1;
+              margin-top:0;
+        }
+        
+
+.tag-label span.badge-category.razrabotka {
+    margin-right: 5px;
+}
+
+
+
+
+/* Layouts
+   ========================================================================== */
+.Two_columns .Main {
+     max-width: 970px;
+    
+}
+
+@media (min-width: 768px)
+.Two_columns .Header_body {
+    max-width: 970px;
+}
+
+.Two_columns .media-body.post {
+    margin-bottom: 1em;
+}
+        
+
+.SideBar p {
+   
+    font: 14px/1.5 Merriweather;
+   
+}
+
+
+.SideBar h3 {
+    
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.Music .PostsList {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAE0lEQVQIW2N48+bNfxhggLPwcgDQbi+YlZXTEQAAAABJRU5ErkJggg==);
+    padding: 15px 25px;
+    overflow: auto;
+    display: block;
+    margin: 0 -25px 15px;
+        margin-top: 0px;
+    margin-top: 0px;
+    border-radius: 4px;
+}
+
+
+
+
+/* Widget
+   ========================================================================== */
+
+.widget-title:before {
+  
+      content: "";
+    height: 1em;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+  
+  
+}
+
+
+.widget-title {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    min-height: 0;
+}
+
+.widget-title:before {
+background-color: #b5c5d6;
+}
+
+.pink:before {
+background-color: #ffe0f2;
+}
+
+.green:before {
+background-color: #4d7c79;
+    top: 35%;
+}
+
+.orange:before {
+    background-color: #e9a4a4;
+}
+
+
+

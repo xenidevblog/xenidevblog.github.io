@@ -1,0 +1,87 @@
+---
+layout: experiment
+---
+
+
+      <title>jQuery Modal Demo</title>
+     
+      
+      
+      {% for post in site.posts %}
+   
+   <div class="popup-overlay">
+  <div class="popup-content">
+    
+	  <div class="media">
+        <div class="media-left media-top">
+            {% if post.thumbnail %}
+            <img class="posts-list-image rounded" src="{{ post.thumbnail }}" alt="{{ post.title }}" />
+            {% endif %}
+        </div>
+        <div class="media-body">
+            <h5 class="media-heading"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+            </h5>
+
+            <div class="metabox-d">
+                {{ post.date | date:"%d.%m.%Y"}}
+            </div>
+
+            {{post.excerpt | normalize_whitespace | remove: '<br>' | remove: '<p>' | remove: '<figcaption>' | strip_newlines | strip_html | truncatewords: 12 }}
+
+            <div class="metabox-t">
+                {% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: " | " }}
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+	      {% endfor %}
+	  
+	  
+	  
+    <button class="close">Close</button>
+  </div>
+</div>
+
+<div class="popup-hold">
+  <h1>Mind</h1>
+  <button class="open">Open</button>
+</div>
+
+
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h1>Green</h1>
+    <button class="close">Close</button>
+  </div>
+</div>
+
+<div class="popup-hold">
+  <h1>Time</h1>
+  <button class="open">Open</button>
+</div>
+
+
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h1><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h1>
+    <button class="close">Close</button>
+  </div>
+</div>
+
+<div class="popup-hold">
+  <h1>Soul</h1>
+  <button class="open">Open</button>
+</div>
+
+
+      
+      
+
+
+   </body>
+</html>

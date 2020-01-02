@@ -1,0 +1,98 @@
+
+/* POSTS-LIST */
+
+.welcome_bar {
+    margin-bottom: 45px;
+  margin-bottom: 24px;
+    margin-top: -8px;
+    
+}
+
+
+
+.welcome_bar p {
+  display:inline-block;
+  font-weight: 500;
+    
+    letter-spacing: .01em;
+}
+
+
+.welcome_bar i.fa.fa-github {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0;
+      
+}
+
+
+
+h5.media-heading a {
+  
+      
+  text-decoration: none;
+  
+   
+   
+    color: #424242;
+    margin-top: 9px;
+     
+    
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .005em;
+    line-height: 26px;
+ 
+}
+
+
+span.label-category {
+  color: rgb(255, 255, 255);
+  background-color: rgb(94, 196, 175);
+  white-space: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+  height: auto;
+  float: right;
+  font-size: 90%;
+  transform: translateY(-1px);
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+
+.posts-list-image {
+  float: left;
+    width: auto;
+    margin: 8px 20px 16px 0;
+    border-radius: 0.2rem;
+  
+     height: 38px;
+    border-radius: 50%;
+    display: inline-block;
+  
+   
+}
+
+  
+   
+
+
+.label-tag {
+  color: rgb(128, 128, 128);
+      margin: .5em 0;
+}
+
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.pb-3, .py-3 {
+  padding-bottom: 1rem !important;
+}
+
+.lh-125 {
+  line-height: 1.25;
+}

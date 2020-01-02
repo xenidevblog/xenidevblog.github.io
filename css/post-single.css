@@ -1,0 +1,33 @@
+.col-md-2>.square-categories {
+    
+    margin: unset;
+   
+}
+
+.col-md-3 > .app-link {
+    
+    margin-top: unset;
+}
+
+
+.Root.Two_columns h5 {
+
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+
+
+
+
+
+.single-post-feature-image {
+    float: left;
+    margin: -1em 1em 0 0;
+    width: auto;
+    height: 5em;
+    position: relative;
+    top: 0.5em;
+    border-radius: 50%;
+    border: 3px solid 
+    #f5f4f2;
+}

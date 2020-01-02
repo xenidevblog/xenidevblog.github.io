@@ -1,0 +1,63 @@
+---
+layout: experiment
+---
+   
+        {% for post in site.posts %}
+        <div class="PostsList">
+
+        <div class="popup-overlay">
+          <div class="popup-content ">
+          <button class="close">Close</button>
+
+             {{post.title}}
+            <div class="media-body post">
+                    {{ post.content modal-content}} 
+                </div>
+
+
+
+           
+          </div>
+        </div>
+        
+        <div class="popup-hold">
+         
+             {{post.title}}
+         
+         <button class="open">Open</button>
+        {% if post.image %}
+        <div class="image">
+            <img class="image--big" src="{{ post.image }}" alt="{{ post.title }}" />
+        </div>
+        {% endif %}
+
+
+
+        </div>
+        
+        {% endfor %}
+        
+        
+        <div class="popup-overlay">
+          <div class="popup-content">
+            <h1>Green</h1>
+             
+             {{post.title}}
+            <div class="media-body post">
+                    {{ post.content }} 
+                </div>
+
+            <button class="close">Close</button>
+          </div>
+        </div>
+        
+        <div class="popup-hold">
+          <h1>Time</h1>
+          <button class="open">Open</button>
+        </div>
+        
+        
+       
+    </div>
+        
+         

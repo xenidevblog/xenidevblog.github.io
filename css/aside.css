@@ -1,0 +1,65 @@
+aside {
+    
+    font-size: 14px;
+    line-height: 20px;
+    color: #757575;   
+}
+
+
+.app-link--header {
+    white-space: nowrap;
+}
+
+ /*.logo {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background-size: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+} 8/
+
+
+ .app-link--name {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    /* margin-left: 8px; */
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+   
+    letter-spacing: 0.16px;
+    line-height: 25px;
+}
+
+
+
+
+.app-link {
+    margin-left: 90px;
+    margin-top: 32px;
+}
+
+
+
+ .app-information {
+    
+    vertical-align: top;
+    
+    margin-top: 21px;
+}
+
+.app-link--title {
+ margin-top: 30px;
+}
+
+
+
+.badge-podcast > img {
+   
+    margin-bottom: 15px;
+    margin-top: -5px;
+}

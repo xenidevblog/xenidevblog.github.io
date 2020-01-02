@@ -1,0 +1,153 @@
+
+.Index .media {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAE0lEQVQIW2N48+bNfxhggLPwcgDQbi+YlZXTEQAAAABJRU5ErkJggg==);
+    padding: 15px 25px;
+    overflow: auto;
+    display: block;
+    margin: 0 -25px 15px;
+        margin-top: 0px;
+    border-radius: 4px;
+}
+
+.Index .Main_body {
+    background: #f7f7f7;
+}
+
+.intro--large div  {
+       background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: calc(40vh);
+    width: 100%;
+}
+
+.intro--large div (min-width: 768px) {
+ 
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: calc(40vh);
+    width: 100%;
+}
+
+
+
+
+.row.intro--large {
+    margin-top: 64px;
+}
+
+
+
+
+.intro--large h1 {
+    color: #424242;
+    
+    font-size: 2.25rem;
+    font-weight: 400;
+    letter-spacing: .0175rem;
+    line-height: 2.75rem;
+    text-align: left;
+  
+    font-size: 44px;
+}
+
+
+.intro--large p {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.footer--large h1 {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #202124;
+       font-family: 'Montserrat', Helvetica, sans-serif;
+           font-weight: 400;
+    
+   
+}
+
+.footer--large h2 {
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.57143;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #202124;
+       font-family: 'Montserrat', Helvetica, sans-serif
+}
+
+.footer--large .extra-data {
+    color: #757575;
+    float: left;
+    line-height: 1.5;
+     font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .35px;
+       
+}
+
+
+.footer--large {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+
+
+.footer--large--right a {
+    color: #6F92BA;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    
+    font-weight: 500;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+        color: #202124;
+
+    text-transform: uppercase;
+}
+
+
+
+.col-md-7 .media-heading {
+        margin-bottom: 24px;
+}
+
+
+.footer--large ul {
+    list-style-type: none;
+    margin-block-start: 1em;
+
+    padding-inline-start: 0px;
+}
+
+
+img.posts-feature-image {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: auto;
+    height: 5em;
+    position: relative;
+    top: 0.5em;
+    border-radius: 50%;
+    border: 3px solid #f5f4f2;
+}
+
+
+.posts-list-image-square {
+    float: left;
+     margin: 8px 10px 16px 0;
+    border-radius: 0.2rem;
+  
+
+    width: 10px;
+    height: 10px;
+
+}

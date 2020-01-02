@@ -1,0 +1,8 @@
+/**
+ * Custom styles that overwrite bootstrap
+ */
+
+.col-md-10 .media-text audio {
+    margin-bottom: -8px;
+    margin-top: 5px;
+}

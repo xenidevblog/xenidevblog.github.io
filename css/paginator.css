@@ -1,0 +1,48 @@
+
+
+li.page-item.active {
+  
+    padding: 0 10px;
+    line-height: 30px;
+   
+    margin: .5em 0;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: .08em;
+}
+
+
+
+
+.pagination > li > a {
+    border: none;
+    display: inline-block;
+   
+    padding: 0 10px;
+    line-height: 30px;
+    background-color: transparent;
+    
+    margin: .5em 0;
+    font-style: normal;
+    
+    font-size: 14px;
+    letter-spacing: .08em;
+}
+
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    border-color: #ee6e73;
+    background-color: #ee6e73;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: transparent;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

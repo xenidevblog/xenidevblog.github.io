@@ -1,0 +1,43 @@
+.welcome_bar {
+    overflow: auto;
+    margin-top: -8px;
+    
+}
+
+
+.welcome_bar h1 {
+    color: #424242;
+    font-weight: 400;
+    letter-spacing: .0175rem;
+    line-height: 2.75rem;
+    text-align: left;
+}
+
+
+.welcome_bar p {
+  display:inline-block;
+  font-weight: 500;
+    
+    letter-spacing: .01em;
+}
+
+.WelcomeBar h1 {
+    color: #424242;
+    font-weight: 400;
+    letter-spacing: .0175rem;
+    line-height: 2.75rem;
+    text-align: left;
+}
+
+.welcome-bar__intro {
+    border-radius: 8px;
+    background: #f8f9fa;
+    display: block;
+    font-size: 1.4rem;
+    color: #3c4043;
+    font-weight: 500;
+    }
+
+.margin--top {
+    margin-top: 4rem;
+}
