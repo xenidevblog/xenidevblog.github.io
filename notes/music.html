@@ -1,0 +1,129 @@
+---
+layout: two-columns
+---
+
+
+<div class="Music Main">
+	<main role="main" class="Main_body">
+		
+			
+		<div class="Top_label">
+			<a class="tag-label" href="/"><span class="badge-category music"></span> музыка </a>
+		</div>
+	
+		{% for post in site.posts %} {% if post.categories contains 'музыка'%}
+		
+		{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+  {% if year == "2019" or year == "2018" %}
+	
+	
+		
+		
+		
+		<div class="PostsList">
+			
+			
+			<h4 class="media-heading">
+				<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+			</h4>
+			
+                    <div class="metabox-d">
+                        {{ post.date | date:"%d.%m.%Y"}}
+                    </div>
+			
+			
+			<ul class="Tags">
+				<li>
+					
+					<a href="/tagpages/russian.html">
+					{% if post.tags.size > 0 %} {{ post.tags | sort | join: " | " }} {% endif %}
+					
+					</a></li>
+				
+			</ul>
+			
+
+			{% if post.image %}
+			<div class="image">
+				<img class="image--big" src="{{ post.image }}" alt="{{ post.title }}" />
+			</div>
+			{% endif %}
+			<div class="media-body post">
+				{% if post.content contains "<!-- Дальше -->" %} {{ post.content | split:"<!-- Дальше -->" | first % }}
+				<div>
+					<a href="{{ post.url }}"> Read More </a>
+				</div>
+				{% else %} {{ post.content }} {% endif %}
+			</div>
+				
+	
+		</div>
+		{% endif %} 
+		{% endif %} 
+		{% endfor %}
+		
+		
+	<ul class="pagination">
+
+    <span></span>
+
+    <li class="page-item active">1</li>
+
+    <li class="page-item"> <a href="/notes/music-page2.html">2</a> </li>
+
+        <li class="page-item">
+        <a href="/page2/"></a>
+    </li>
+
+</ul>	
+		
+		
+		
+		
+		
+		
+		
+        
+        </main>
+		<div class="Main_aside">
+			<aside class="SideBar">
+				
+				
+				<div class="green widget-title">
+			
+                                <h3>
+  					When music speaks louder than words
+  				</h3>
+				</div>
+			
+                                 
+				
+				
+				
+				<p>
+					Так по-жизни сложилась, что мне часто приходилось доносить свои "люблю" "нелюблю" до людей далеких от России, опытным путем поняла есть фильмы и песни internationalised на сто процентов, а есть чуть менее.  
+				</p>
+				<p>
+					
+					Стопроцентных мало, примерно как Богемская Рапсодия: "я не понимаю о чем ты, но уже с
+					тобой..." Таких артистов единицы поэтому в этой подборке есть и те, кто просто озвучил свою страну.
+					
+				</p>
+	
+			</aside>
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+</div>

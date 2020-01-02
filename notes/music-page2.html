@@ -1,0 +1,111 @@
+---
+layout: two-columns
+---
+
+
+<div class="Main">
+	<main role="main" class="Main_body">
+		<div>
+			<a class="tag-label" href="/"><span class="badge-category music"></span> музыка </a>
+		</div>
+		<hr>
+		{% for post in site.posts %} {% if post.categories contains 'музыка'%}
+		
+		{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+  {% if year == "2017" %}
+	
+		
+		
+		
+		
+		
+		<div class="PostsList">
+			<h4 class="media-heading">
+				<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+			</h4>
+			{% if post.image %}
+			<div class="image">
+				<img class="image--big" src="{{ post.image }}" alt="{{ post.title }}" />
+			</div>
+			{% endif %}
+			<div class="media-body post">
+				{% if post.content contains "<!-- Дальше -->" %} {{ post.content | split:"<!-- Дальше -->" | first % }}
+				<div>
+					<a href="{{ post.url }}"> Read More </a>
+				</div>
+				{% else %} {{ post.content }} {% endif %}
+			</div>
+			<div class="metabox-t">
+				{% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: " | " }} {% endif %}
+			</div>
+		</div>
+		{% endif %} 
+		{% endif %} 
+		{% endfor %}
+		
+
+		
+	<ul class="pagination">
+
+    <span></span>
+
+  
+
+    <li class="page-item"> <a href="/notes/music.html">1</a> </li>
+		  <li class="page-item active">2</li>
+
+        <li class="page-item">
+        <a href="/page2/"></a>
+    </li>
+
+</ul>	
+			
+		
+		
+		
+		
+		
+        
+        </main>
+		<div class="Main_aside">
+			<aside class="SideBar">
+				
+				
+				<div class="green widget-title">
+			
+                                <h3>
+  					When music speaks louder than words
+  				</h3>
+				</div>
+			
+                                 
+				
+				
+				
+				<p>
+					Так по-жизни сложилась, что мне часто приходилось доносить свои "люблю" "нелюблю" до людей далеких от России. Однажды я решила, что нет ничего проще достаточно просто перевести свои любимые песни и фильмы,
+					но этого оказалось мало.
+				</p>
+				<p>
+					В общем, опытным путем поняла есть фильмы и песни internationalised на сто процентов, есть чуть менее. 
+					Стопроцентных мало, примерно как Богемская Рапсодия: я не понимаю о чем ты, но уже с
+					тобой...
+				</p>
+	
+			</aside>
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+</div>

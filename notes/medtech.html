@@ -1,0 +1,65 @@
+---
+layout: music
+title: Notes
+notes: active
+---
+ <div class="container">
+        <div class="row">
+
+        <div class="col-md-3"> 
+        </div>
+
+        <div class="col-md-6">
+
+           <!-- .welcome_bar -->         
+<div class="welcome_bar">
+
+    <ul class="square-categories">
+        <li> <a href="/notes/">все </a></li>
+        <li> <a href="/notes/razrabotka.html">IT</a> </li>
+        <li> <a href="/notes/video.html">Видео<span class="badge-category video"></span></a> </li>
+
+        <li> <a href="/notes/music.html">Музыка<span class="badge-category music"></span></a> </li>
+        <li> <a href="/notes/medtech.html">Разное<span class="badge-category medtech disabled"></span></a> </li>
+    </ul>
+
+</div>
+<!-- /.welcome_bar -->
+  </div> 
+          </div> 
+          <div class="row">
+                  
+        <div class="col-md-3"> 
+        </div>
+
+        <div class="col-md-6">
+          
+        {% for post in site.posts %} {% if post.categories contains 'медтех' %}
+        <div class="media">
+          <div class="media-left media-top">
+            {% if post.thumbnail %}
+            <img class="posts-list-image rounded" src="{{ post.thumbnail }}" alt="{{ post.title }}" /> {% endif %}
+          </div>
+          <div class="media-body">
+
+            <h5 class="media-heading"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h5> 
+           {{post.excerpt | strip_html | normalize_whitespace | escape | truncatewords: 40 }}
+            <!-- Post info-tags  -->
+            <div class="margin10 label-tag">
+              {% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: " | " }}            
+              {% endif %}
+            </div>
+           
+          </div>
+          <hr> {% endif %} {% endfor %}
+
+        </div>
+           </div>
+          
+           
+             <div class="col-md-3">
+            </div>
+ 
+</div>
+       </div>  
+       

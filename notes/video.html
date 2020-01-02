@@ -1,0 +1,68 @@
+---
+layout: two-columns
+title: blog
+---
+
+
+<div class="Main">
+	<main role="main" class="Main_body">
+		<div>
+			<a class="tag-label" href="/"><span class="badge-category video"></span> видео </a>
+		</div>
+		<hr>
+
+
+            
+            
+            
+
+            {% for post in site.posts %} {% if post.categories contains 'видео' %}
+
+            <div class="PostsList temp--video">
+                <h5 class="media-heading"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h5> {% if post.image %}
+                <div class="image">
+                    <img class="image--big" src="{{ post.image }}" alt="{{ post.title }}" />
+                </div>
+                {% endif %}
+
+                <div class="media-body post">
+
+                    {% if post.content contains "<!-- Дальше -->" %} {{ post.content | split:"<!-- Дальше -->" | first % }}
+                    <div>
+                        <a href="{{ post.url }}"> Дальше </a>
+                    </div>
+                    {% else %} {{ post.content }} {% endif %}
+
+                </div>
+
+            </div>
+            {% endif %} {% endfor %}
+
+
+</main>
+		<div class="Main_aside" style="min-height: 195px;">
+			
+			
+						<aside class="SideBar">
+				<div class="pink widget-title">
+			
+                                <h3>
+  					Видео
+  				</h3>
+				</div>
+ 
+				
+				<p>
+					Люблю люблю снимать и монтировать видео. Просто нравится поэтому иногда пишу о монтаже и фильмах.  
+				</p>
+				
+	
+			</aside>
+			
+			
+			
+			
+			
+		</div>
+</div>
+       
