@@ -575,7 +575,9 @@ ul, ol {
 
 line-height: 25px;
 }
-  blockquote  {
+
+
+blockquote p {
     line-height: 18px;
 font-size: 14px;
     }
