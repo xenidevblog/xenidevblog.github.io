@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="author" content="xnidev">
+		<meta name="robots" content="noindex" />
+		<title>
+			{{ page.title }}xеnidev
+		</title>
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/jumbotron-narrow.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+		<!-- favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+		<link rel="shortcut icon" type="image/png" href="/favicon.png">
+	</head>
+	<body id="Body">
+		<div class="Root Two_columns">
+			<div class="Header">
+				<div class="Header_body">
+					<a href="/"><img class="logo-large" src="/img/logo-japan.png"></a>
+					<a rel="author" href="/" class="Header_me">xenidev</a>
+					<nav class='ribbon'>
+						<a href="/contact"><span>Контакты</span></a>
+					</nav>
+				</div>
+			</div>
+      
+      
+       <div class="Main">
+				<main role="main" class="Main_body">
+					
+<div class="Main_welcome">
+			
+			
+			<div class="WelcomeBar">
+				
+				<a class="badge-podcast" href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9hMmI4OGIwL3BvZGNhc3QvcnNz "><img src="/img/google_podcasts_badge_svg.svg&#10; " alt="Google Podcasts App"></a>
+				
+				
+				
+				
+				{% if page.categories.size > 0 %} {% for category in page.categories %}
+                    <ul class="square-categories">
+                        <li>
+                            {% if page.categories contains 'медтех' %}
+                            <a href="/notes/medtech.html"><span class="badge-category-medtech"></span></a>
+                        </li>
+                        <li>
+                            {% elsif page.categories contains 'разработка' %}
+                            <a href="/">web<span class="badge-category-razrabotka"></span> </a>
+                        </li>
+                        <li>
+                            {% elsif page.categories contains 'видео' %}
+                            <a href="/notes/video.html">{{category}}<span class="badge-category-video"></span></a>
+                        </li>
+			    
+			    <li>
+                            {% elsif  page.categories contains 'музыка' %}
+                            <a href="/notes/music.html">{{category}}<span class="badge-category-music"></span></a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endfor %} {% endif %}
+				
+					
+						
+				
+					 
+							            
+				<hr>	
+		
+			</div>
+		</div>
+					
+		 <div class="welcome_bar_single_post">
+			   <div class="metabox-d">{{ page.date | date:"%d.%m.%Y"}}</div>
+                        <h5>{{ page.title }}</h5>
+			 
+			 
+			 <!-- Post info-tags  -->
+                        
+                        <div class="metabox-t">
+                            {% if page.tags.size > 0 %} Tag{% if page.tags.size > 1 %}s{% endif %}: {{ page.tags | sort | join: " | " }} {% endif %}
+
+                        </div>
+                      
+                    </div>
+
+			
+					{{ content }}
+					
+					                        
+					
+	 {% include footer.html %}		 
+			
+</main>
+
+
+<div class="Main_aside">
+			
+			
+			<aside class="SideBar">
+				
+				<aside class="SideBar">
+				 
+                    <ul class="square-categories">
+                        <li>
+                            
+                            <a href="/notes/music.html">музыка<span class="badge-category-music"></span></a>
+                        </li>
+                        
+                    </ul>
+				
+				<a class="badge-podcast" href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9hMmI4OGIwL3BvZGNhc3QvcnNz "><img src="/img/google_podcasts_badge_svg.svg&#10; " alt="Google Podcasts App"></a>
+				
+				
+				
+                     
+											            
+				
+		
+			</aside>
+				
+											            
+				
+		
+			</aside>
+		</div>
+	
+</div>
+
+		</div>
+	
+		{% include scripts.html %}
+	</body>
+
+</html>

@@ -1,0 +1,98 @@
+---
+layout: large
+---
+
+<div class="row article--margin">
+
+    <div class="col-md-1 hidden-sm hidden-xs">
+    </div>
+
+    <div class="col-md-10">
+
+        <div class="col-md-2">
+            <!-- Post info -->
+            <div class="noteinfo">
+
+                {% if page.categories.size > 0 %} {% for category in page.categories %}
+                <ul class="square-categories">
+                    <li>
+                        {% if page.categories contains 'медтех' %}
+                        <a href="/notes/medtech.html">{{category}}<span class="badge-category-medtech"></span></a>
+                    </li>
+                    <li>
+                        {% elsif page.categories contains 'разработка' %}
+                        <a href="/notes/razrabotka.html">{{category}}<span class="badge-category-razrabotka"></span> </a>
+                    </li>
+                    <li>
+                        {% elsif page.categories contains 'видео' %}
+                        <a href="/notes/video.html">{{category}}<span class="badge-category-video"></span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+                {% endfor %} {% endif %}
+
+            </div>
+        </div>
+
+        <div class="col-md-8 notebody">
+            <div class="post-article-title">
+                <h1>{{ page.title }}</h1>
+
+                <div class="metabox-d">{{ page.date | date:"%d.%m.%Y"}}</div>
+
+            </div>
+            <!-- Featured Image-->
+            {% if page.image %}
+            <img class="featured-image-single" src="{{ page.image }}" alt="{{ page.title }}" /> {% endif %} {{ content }}
+            <div class="margin10 label-tag">
+                {% if page.tags.size > 0 %} Tag{% if page.tags.size > 1 %}s{% endif %}: {{ page.tags | sort | join: " | " }} {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-1 hidden-sm hidden-xs">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                
+            <div class="col-md-2">
+             </div>
+          
+
+                <div class="col-md-8 footer">
+                    <div class="row">
+                        <div class="col-sm-8 footer_bar">
+                            <p><small>&copy; xenidev 2018</small></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="pull-right"><small><a href="/about" title="About this site">О сайте</a></small></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /footer -->
+                
+              <div class="col-md-2">
+             </div>
+
+            </div>
+            <!-- /md-6 -->
+            <div class="col-md-1">
+            </div>
+        </div>
+        <!-- /row -->

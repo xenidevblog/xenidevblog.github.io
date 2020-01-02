@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="{{ page.description }}">
+	<meta name="author" content="xnidev">
+	<meta name="robots" content="noindex" />
+			<!-- favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+	<link rel="shortcut icon" type="image/png" href="/favicon.png">
+	
+	
+	<title>{{ page.title }} | xеnidev </title>		
+	<!-- styles -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+
+
+    
+    <script>
+	    
+	   	    
+		     $(document).ready(function() {
+		    
+		     $('.bg-grey').css('backgroundColor', '#f0f3f6');
+$('.bg-grey').animate({
+    'opacity': '0.5'
+}, 500, function () {
+    $('.bg-grey').css({
+        'backgroundColor': 'transparent',
+            'opacity': '1'
+    });
+});
+ 
+});
+
+
+
+</script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                {% include header.html %}
+            </div>
+            <!-- /md-6 -->
+            <div class="col-md-3">
+            </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+
+            <div class="notes">
+
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                    {% if page.categories.size > 0 %} {% for category in page.categories %}
+                    <ul class="square-categories">
+                        <li>
+                            {% if page.categories contains 'медтех' %}
+                            <a href="/notes/medtech.html"><span class="badge-category-medtech"></span></a>
+                        </li>
+                        <li>
+                            {% elsif page.categories contains 'разработка' %}
+                            <a href="/notes/razrabotka.html">{{category}}<span class="badge-category-razrabotka"></span> </a>
+                        </li>
+                        <li>
+                            {% elsif page.categories contains 'видео' %}
+                            <a href="/notes/video.html">{{category}}<span class="badge-category-video"></span></a>
+                        </li>
+			    
+			    <li>
+                            {% elsif  page.categories contains 'музыка' %}
+                            <a href="/notes/music.html">{{category}}<span class="badge-category-music"></span></a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endfor %} {% endif %}
+                </div>
+
+                <div class="col-md-6 notebody">
+
+                    <div class="welcome_bar_single_post">
+                        <h5 class="media-heading">{{ page.title }}</h5>
+                        <div class="metabox-d">{{ page.date | date:"%d.%m.%Y"}}</div>
+                    </div>
+
+                    <!-- Single Post Image-->
+
+                    {% if page.image %}
+                    <div class="image">
+                        <img class="featured-image-single" src="{{ page.image }}" alt="{{ page.title }}" />
+                    </div>
+                    {% endif %} 
+			<div class="content bg-grey">
+			
+			{{ content }}
+			</div>
+
+                    
+                        <!-- Post info-tags  -->
+                        <div class="margin10 label-tag">
+                            {% if page.tags.size > 0 %} Tag{% if page.tags.size > 1 %}s{% endif %}: {{ page.tags | sort | join: " | " }} {% endif %}
+                        </div>
+
+                </div>
+                <!-- /.notes -->
+
+                <div class="col-md-1">
+                </div>
+
+                <!-- Wi -->
+
+                <div class="col-md-2">
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-sm-8 footer_bar">
+                            <p><small>&copy; xenidev 2018</small></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="pull-right"><small><a href="/about" title="About this site">О сайте</a></small></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /footer -->
+
+            </div>
+            <!-- /md-6 -->
+            <div class="col-md-3">
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+
+   {% include scripts.html %}
+	
+    
+
+</body>
+
+</html>

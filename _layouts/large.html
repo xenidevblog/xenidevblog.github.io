@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{% include head.html %}
+  
+
+<body>  
+     
+    <div class="container-fluid">   
+        <div class="row">
+            <div class="col-md-1">               
+            </div>
+            <div class="col-md-10">
+                {% include headerlarge.html %}
+            </div>
+             <div class="col-md-1">                
+            </div>
+        </div>
+        <!-- /row -->
+      
+       {{ content }}
+
+        <div class="row">
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-6">
+           
+            </div>
+            <!-- /md-6 -->
+            <div class="col-md-3">
+                
+            </div>
+        </div>
+        <!-- /row -->
+
+    </div>
+    <!-- /container -->
+
+    {% include scripts.html %}
+
+</body>
+</html>

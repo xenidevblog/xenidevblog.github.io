@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="author" content="xnidev">
+		<meta name="robots" content="noindex" />
+		<title>
+			{{ page.title }}xеnidev
+		</title>
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/jumbotron-narrow.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+		<!-- favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+		<link rel="shortcut icon" type="image/png" href="/favicon.png">
+		
+		
+	<script>	
+		$(document).ready(function(){
+  
+  init_document_ready();
+
+});
+
+
+(function(){
+        // Create jQuery body object
+        var $body = $('body'),
+
+        // Use a tags with 'class="modalTrigger"' as the triggers
+        $modalTriggers = $('a.modalTrigger'),
+
+        // Trigger event handler
+        openModal = function(evt) {
+              var $trigger = $(this),                  // Trigger jQuery object
+
+              modalPath = $trigger.attr('href'),       // Modal path is href of trigger
+
+              $newModal,                               // Declare modal variable
+
+              removeModal = function(evt) {            // Remove modal handler
+                    $newModal.off('hidden.bs.modal');  // Turn off 'hide' event
+                    $newModal.remove();                // Remove modal from DOM
+              },
+
+              showModal = function(data) {             // Ajax complete event handler
+                    $body.append(data);                // Add to DOM
+                    $newModal = $('.modal').last();    // Modal jQuery object
+                    $newModal.modal('show');           // Showtime!
+                    $newModal.on('hidden.bs.modal',removeModal); // Remove modal from DOM on hide
+              };
+
+              $.get(modalPath,showModal);             // Ajax request
+
+              evt.preventDefault();                   // Prevent default a tag behavior
+        };
+
+        $modalTriggers.on('click',openModal);         // Add event handlers
+  }());
+		
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</head>
+	<body id="Body">
+		<div class="Root one_column">
+			<div class="Header">
+				<div class="Header_body">
+					<a href="/"><img class="logo-large" src="/img/logo-japan.png"></a>
+					<a rel="author" href="/" class="Header_me">xenidev</a>
+					<nav class='ribbon'>
+						<a href='#'data-toggle="modal" data-target="#myModal"><span>Контакты</span></a>
+					</nav>
+				</div>
+			</div>
+			{{ content }}
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-7">
+				</div>
+				<!-- /md-6 -->
+				<div class="col-md-3">
+				</div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+						</div>
+						<div class="modal-body">
+							<div class="contact">
+								<ul class="list-unstyled">
+									<li>
+										Привет! К организации IT мероприятий я не имею отношения и редко на них выбираюсь поэтому на профессиональные темы со мной можно связаться через:
+										<li>
+											Гитхаб:
+											<a href="https://github.com/xenidev">@GitHub</a>
+										</li>
+										<li>
+										</li>
+										<li>
+											Или просто написать на email: xenidevxeni(at)gmail.com
+										</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /container -->
+		{% include scripts.html %}
+		{% include myRaznoe.html %}
+	</body>
+
+</html>
+  

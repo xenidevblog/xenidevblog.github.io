@@ -1,0 +1,49 @@
+
+
+
+  <!-- Moda gfl -->
+  <div class="modal fade" id="myRaznoe" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          
+          
+          {% if page.categories.size > 0 %} {% for category in page.categories %}
+                    <ul class="square-categories">
+                        <li>
+                            {% if page.categories contains 'медтех' %}
+                            <a href="/notes/medtech.html"><span class="badge-category-medtech"></span></a>
+                        </li>
+                        <li>
+                            {% elsif page.categories contains 'разработка' %}
+                            <a href="/notes/razrabotka.html">{{category}}<span class="badge-category-razrabotka"></span> </a>
+                        </li>
+                        <li>
+                            {% elsif page.categories contains 'видео' %}
+                            <a href="/notes/video.html">{{category}}<span class="badge-category-video"></span></a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endfor %} {% endif %}
+          
+          
+          <a href="{{post.url | prepend: site.baseurl}}">{{post.title}}пропропопо поп опо п</a>
+          
+          
+          
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  

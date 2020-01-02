@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="{{ page.description }}">
+	<meta name="author" content="xnidev">
+	<meta name="robots" content="noindex" />
+	<!-- favicon
+	<link rel="shortcut icon" href="/img/ico/favicon.png">
+	-->
+	<title>{{ page.title }} | xеnidev </title>		
+	<!-- styles -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+
+    
+    <script>
+	    
+	    $(document).ready(function() {
+		    $('.bg-video').css('backgroundColor', '#ffe0f2');
+$('.bg-video').animate({
+    'opacity': '0.5'
+}, 500, function () {
+    $('.bg-video').css({
+        'backgroundColor': 'transparent',
+            'opacity': '1'
+    });
+});
+ 
+});
+</script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                {% include header.html %}
+            </div>
+            <!-- /md-6 -->
+            <div class="col-md-3">
+            </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">          
+            
+            
+                {{ content }}
+    
+                        
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+            <div class="col-md-3">               
+            </div>
+            <div class="col-md-6">
+                {% include footer.html %}
+            </div>
+            <!-- /md-6 -->
+            <div class="col-md-3">
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+
+    {% include scripts.html %}
+
+</body>
+</html>

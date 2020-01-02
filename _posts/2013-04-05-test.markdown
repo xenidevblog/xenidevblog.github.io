@@ -1,0 +1,7 @@
+---
+layout: post
+title: test
+summary: my test
+---
+
+test fhkdjghjkdfhgjk hdfgjkhdfjk gdfhgkjdf ghdfkj ghdgh dhfkgj dghkdfj

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="author" content="xnidev">
+		<meta name="robots" content="noindex" />
+		<title>
+			{{ page.title }}xеnidev
+		</title>
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/jumbotron-narrow.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+		<!-- favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+		<link rel="shortcut icon" type="image/png" href="/favicon.png">
+		
+		
+		 <style>
+      
+       .popup-overlay {
+  visibility: hidden;
+  position: absolute;
+  background: grey;
+  height: 50%;
+  width: 50%;
+  left: 25%;
+}
+
+.popup-overlay.active {
+  visibility: visible;
+  z-index: 1;
+}
+
+.popup-content {
+  visibility: hidden;
+}
+
+.popup-content.active {
+  visibility: visible;
+  z-index: 1;
+}
+
+.popup-hold {
+  height: 330px;
+  border: 2px solid black;
+      </style>
+		
+		
+		
+		
+		
+	</head>
+	<body id="Body">
+		<div class="Root Two_columns">
+			<div class="Header">
+				<div class="Header_body">
+					<a href="/"><img class="logo-large" src="/img/logo-japan.png"></a>
+					<a rel="author" href="/" class="Header_me">xenidev</a>
+					<nav class='ribbon'>
+						<a href="/contact"><span>Контакты</span></a>
+					</nav>
+				</div>
+			</div>
+			
+					{{ content }}
+
+					
+			
+			
+
+	
+
+
+		</div>
+	
+		{% include scripts.html %}
+		
+		
+      <script>
+$(document).ready(function(e) {
+  // adds "active" class to overlay and content
+  $(".open").on("click", function() {
+    $(this).parent().prev(".popup-overlay").addClass("active");
+    $(this).parent().prev(".popup-overlay").find(".popup-content").addClass("active");
+  });
+  // removes "active" class from overlay and content
+  $(".close").on("click", function() {
+    $(".popup-overlay, .popup-content").removeClass("active");
+  });
+});
+         
+  
+      </script>
+		
+		
+		
+	     <script>
+		     
+		     
+		     
+		     
+        $(document).ready(function(e) {
+         
+		     $('body').on('hidden.bs.modal', '.modal', function () {  $(".links-area").empty() });
+		     
+})
+
+                 
+          
+              </script>
+		
+
+			
+		
+		
+		
+	</body>
+
+</html>
