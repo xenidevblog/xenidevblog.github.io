@@ -251,8 +251,11 @@ p + .video-container {
      margin: .5em 0;
     font-style: normal;
     color: #5f6368;
-  font-size: 14px;
+  
     letter-spacing: .08em;
+ 
+line-height: 15px;
+font-size: 12px;
 }
 
 
