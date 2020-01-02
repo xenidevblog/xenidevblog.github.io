@@ -1,0 +1,124 @@
+---
+layout: two-columns
+title: Notes
+notes: active
+---
+  <div class="Index Main">
+				<main role="main" class="Main_body">
+					
+							
+			
+		<div class="Top_label">
+			
+		</div>						
+								
+
+		 
+          {% for post in site.tags[page.tag]  %} 
+		
+		
+		<div class="PostsList">
+			<h4 class="media-heading">
+				<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+			</h4>
+			{% if post.image %}
+			<div class="image">
+				<img class="image--big" src="{{ post.image }}" alt="{{ post.title }}" />
+			</div>
+			{% endif %}
+			<div class="media-body post">
+				{% if post.content contains "<!-- Дальше -->" %} {{ post.content | split:"<!-- Дальше -->" | first % }}
+				<div>
+					<a href="{{ post.url }}"> Read More </a>
+				</div>
+				{% else %} {{ post.content }} {% endif %}
+			</div>
+			<div class="metabox-t">
+				{% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}: 
+				{{ post.tags | sort | join: " | " }} {% endif %}
+			</div>
+		</div>
+		
+		
+		{% endfor %}
+		
+		      {% include footer.html %}
+      
+      
+      
+      	</main>
+        
+        
+        
+        	<div class="Main_aside" style="min-height: 215px;">
+			
+			
+			<aside class="SideBar">
+				
+				
+
+		
+				
+				<h3>Блог</h3>
+				
+				{% for post in site.tags[page.tag]  %} 
+		
+		
+		<div class="PostsList">
+			<h4 class="media-heading">
+				<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+			</h4>
+			{% if post.image %}
+			<div class="image">
+				<img class="image--big" src="{{ post.image }}" alt="{{ post.title }}" />
+			</div>
+			{% endif %}
+			<div class="media-body post">
+				{% if post.content contains "<!-- Дальше -->" %} {{ post.content | split:"<!-- Дальше -->" | first % }}
+				<div>
+					<a href="{{ post.url }}"> Read More </a>
+				</div>
+				{% else %} {{ post.content }} {% endif %}
+			</div>
+			<div class="metabox-t">
+				{% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}: 
+				{{ post.tags | sort | join: " | " }} {% endif %}
+			</div>
+		</div>
+		
+		
+		{% endfor %}
+		
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+											          
+		
+			</aside>
+		</div>
+      
+      
+
+        </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
+      <script>
+$(window).on('load', function() {
+  $('.bg').css('backgroundColor', '#dedede');
+$('.bg').animate({
+    'opacity': '0.5'
+}, 1000, function () {
+    $('.bg').css({
+        'backgroundColor': '#fff',
+            'opacity': '1'
+    });
+});
+
+});
+
+
+
+</script>
+</head>
+<body>
+
+<button>Toggle between hiding and showing the paragraphs</button>
+
+<p class="bg">This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+</body>
+</html>

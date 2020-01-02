@@ -1,0 +1,26 @@
+lang: ru-RU
+encoding: utf-8
+author: "xenidev"
+exclude:
+- README.md
+permalink: /notes/:year/:month/:day/:categories/:title
+markdown: kramdown
+kramdown:
+auto_ids: true
+paginate: 10
+paginate_path: "/page:num/"
+
+
+gems:
+- jekyll-feed
+- jekyll-paginate
+
+
+
+
+categories: [медтех, видео, музыка, разное]
+
+
+
+
+  

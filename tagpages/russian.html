@@ -1,0 +1,93 @@
+---
+layout: tagpage
+title: "Tag: russian"
+tag: russian
+---
+<div class="Main">
+				<main role="main" class="Main_body">
+					
+							
+			
+								
+								
+		<a class="badge-podcast" href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9hMmI4OGIwL3BvZGNhc3QvcnNz "><img src="/img/google_podcasts_badge_svg.svg
+ " alt="Google Podcasts App"></a>
+		
+		<hr>    
+            {% for post in paginator.posts  %}
+            <div class="media">
+                <div class="media-left media-top">
+                    {% if post.thumbnail %}
+                    <img class="posts-list-image rounded" src="{{ post.thumbnail }}" alt="{{ post.title }}" /> {% endif %}
+                </div>
+                <div class="media-body">
+
+                    <h5 class="media-heading"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h5>
+
+                    <div class="metabox-d">
+                        {{ post.date | date:"%d.%m.%Y"}}
+                    </div>
+
+                    {{post.excerpt | normalize_whitespace | remove: '<br>' | remove: '<p>' | remove: '<figcaption>' | strip_newlines | strip_html | truncatewords: 12 }}
+
+			
+			
+			
+			
+  <div class="metabox-t">
+     {% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}:
+	{{ post.tags | sort | join: " | " }}				    			 
+     {% endif %}	  
+  </div>
+			
+			
+                 
+<span>
+	 {% if post.tags.size > 0 %} Tag{% if post.tags.size > 1 %}s{% endif %}:
+  {% capture tag %}
+  {% for tag in post.tags %}
+    {{ tag }}
+  {% endfor %}
+{% endcapture %}
+	
+	
+ 
+	
+	{% assign sortedposts = tag | split: '|'  %}
+				  
+			{{ sortedposts | sort | join: ", " }}		
+
+	  <a href="{{ tag.url }}">{{ tag }}</a>
+					 
+					 
+					 
+				 {% endif %}	 
+				 </span>
+
+     
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+		    
+		    
+	  {% include paginator.html %}
+		    
+		      {% include footer.html %}
+      
+      
+      
+      	</main>
+        
+        
+        
+        	<div class="Main_aside" style="min-height: 255px;">
+			
+
+		</div>
+      
+      
+
+        </div>
