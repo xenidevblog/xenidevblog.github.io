@@ -10,6 +10,7 @@
     background: url(https://www.designcise.com/web/static/img/light/thumb_bg.png);
     position: relative;
     opacity: .9;
+    box-shadow: 7px 9px 17px rgba(0, 0, 0, 54%);
        
 }
 
