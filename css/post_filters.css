@@ -94,8 +94,8 @@ ul.square-badges {
 }
  .badge-category {
      color: transparent;
-     width: 10px;
-     height: 10px;
+     width: 7px;
+     height: 7px;
      display: inline-block;
      cursor: pointer;
      margin-left: 5px;
