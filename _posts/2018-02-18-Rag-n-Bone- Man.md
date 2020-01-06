@@ -8,17 +8,6 @@ thumbnail: "/img/music.png"
 feature-img: "/img/posts/feature-image/human.jpg"
 ---
 
-{% include youtube.html id="TgKSUQDwEqc" %}
-
-
-Замечательную лирику человек пишет. Вот, есть то, что вспоминаешь и становится тепло значит настоящее. А есть то от чего на душе становится муторно, значит суета. Об этом песня.
-<blockquote>
-<p>All I know is I don’t feel it anymore…</p>
-</blockquote>
-
-<!-- Дальше -->
-
-И еще одна:
 
 {% include youtube.html id="L3wKzyIN1yk" %}
 
@@ -29,3 +18,19 @@ feature-img: "/img/posts/feature-image/human.jpg"
 <p>Но не надо меня за это винить</p>
 <p>Я всего лишь человек</p>
   </blockquote>
+  
+<!-- Дальше -->
+
+
+
+Замечательную лирику человек пишет. Вот, есть то, что вспоминаешь и становится тепло значит настоящее. А есть то от чего на душе становится муторно, значит суета. Об этом песня.
+
+
+
+{% include youtube.html id="TgKSUQDwEqc" %} 
+
+
+<blockquote>
+<p>All I know is I don’t feel it anymore…</p>
+</blockquote>
+
