@@ -1,6 +1,6 @@
 ---
 layout: post-one-column
-title: Все определяет послевкусие
+title: Rag'n'Bone Man (старьевщик)
 category: музыка
 thumbnail: "/img/notes/matrix-434035_960_720.jpg"
 tags: british
